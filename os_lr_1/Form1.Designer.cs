@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label1 = new Label();
             label2 = new Label();
+            label1 = new Label();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            button1 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,45 +48,10 @@
             groupBox1.Controls.Add(button1);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(607, 444);
+            groupBox1.Size = new Size(484, 313);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Информация о структуре реестра";
-            // 
-            // button1
-            // 
-            button1.Cursor = Cursors.Hand;
-            button1.Location = new Point(38, 43);
-            button1.Name = "button1";
-            button1.Size = new Size(164, 38);
-            button1.TabIndex = 0;
-            button1.Text = "Просмотр информации";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(38, 118);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(262, 168);
-            textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(347, 118);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(122, 168);
-            textBox2.TabIndex = 2;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(38, 100);
-            label1.Name = "label1";
-            label1.Size = new Size(105, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Название раздела";
             // 
             // label2
             // 
@@ -97,11 +62,47 @@
             label2.TabIndex = 4;
             label2.Text = "Кол-во элементов";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(38, 100);
+            label1.Name = "label1";
+            label1.Size = new Size(105, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Название раздела";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(347, 118);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(122, 168);
+            textBox2.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(38, 118);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(262, 168);
+            textBox1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            button1.Cursor = Cursors.Hand;
+            button1.Location = new Point(38, 43);
+            button1.Name = "button1";
+            button1.Size = new Size(164, 38);
+            button1.TabIndex = 0;
+            button1.Text = "Просмотр информации";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(631, 468);
+            ClientSize = new Size(508, 337);
             Controls.Add(groupBox1);
             Name = "Form1";
             Text = "Карпенко ЛР1";
