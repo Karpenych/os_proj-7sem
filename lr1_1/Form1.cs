@@ -71,12 +71,97 @@ namespace os_lr_1
                 foreach (var name in vNames)
                     listBox1.Items.Add(name + "\t\t\t" + rKey2.GetValue(name).ToString());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 listBox1.Items.Add(ex.Message);
             }
-            
 
+
+        }
+
+        //”далить слово €рлык
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            RegistryKey rKey1 = Registry.CurrentUser;
+            string key2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\";
+            RegistryKey rKey2 = rKey1.OpenSubKey(key2, true);
+            rKey2.SetValue("link", 0);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            RegistryKey rKey1 = Registry.CurrentUser;
+            string key2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\";
+            RegistryKey rKey2 = rKey1.OpenSubKey(key2, true);
+            rKey2.SetValue("link", 16);
+        }
+
+        //”далить стрелку с €рлыка
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            RegistryKey rKey1 = Registry.LocalMachine;
+            string key2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\";
+            RegistryKey rKey2 = rKey1.OpenSubKey(key2, true);
+            RegistryKey rKey3 = rKey2.CreateSubKey("Shell Icons");
+            rKey3.SetValue("29", "");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            RegistryKey rKey1 = Registry.LocalMachine;
+            string key2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Icons\\";
+            RegistryKey rKey2 = rKey1.OpenSubKey(key2, true);
+            rKey2.DeleteValue("29");
+            rKey2.Close();
+            string key3 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\";
+            RegistryKey rKey3 = rKey1.OpenSubKey(key3, true);
+            rKey3.DeleteSubKey("Shell Icons");
+        }
+
+        //ќтключить диспейчер задач
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            RegistryKey rKey1 = Registry.CurrentUser;
+            string key2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\";
+            RegistryKey rKey2 = rKey1.OpenSubKey(key2, true);
+            RegistryKey rKey3 = rKey2.CreateSubKey("System");
+            rKey3.SetValue("DisableTaskMgr", 1);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            RegistryKey rKey1 = Registry.CurrentUser;
+            string key2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\";
+            RegistryKey rKey2 = rKey1.OpenSubKey(key2, true);
+            rKey2.DeleteValue("DisableTaskMgr");
+            rKey2.Close();
+            string key3 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\";
+            RegistryKey rKey3 = rKey1.OpenSubKey(key3, true);
+            rKey3.DeleteSubKey("System");
+        }
+
+        // омандна€ строка
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            RegistryKey rKey1 = Registry.ClassesRoot;
+            string key2 = "Directory\\shell\\";
+            RegistryKey rKey2 = rKey1.OpenSubKey(key2, true);
+            RegistryKey rKey3 = rKey2.CreateSubKey("Command Prompt");
+            rKey3.SetValue(string.Empty, "ќткрыть в командной строке");
+            RegistryKey rKey4 = rKey3.CreateSubKey("Command");
+            rKey4.SetValue(string.Empty, "cmd.exe /s /k pushd \"%L\"");
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            RegistryKey rKey1 = Registry.ClassesRoot;
+            string key2 = "Directory\\shell\\";
+            RegistryKey rKey2 = rKey1.OpenSubKey(key2, true);
+            rKey2.DeleteSubKeyTree("Command Prompt");
         }
     }
 }

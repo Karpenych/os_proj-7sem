@@ -35,6 +35,14 @@
             textBox1 = new TextBox();
             button1 = new Button();
             groupBox2 = new GroupBox();
+            button11 = new Button();
+            button12 = new Button();
+            button10 = new Button();
+            button9 = new Button();
+            button8 = new Button();
+            button7 = new Button();
+            button6 = new Button();
+            button5 = new Button();
             listBox1 = new ListBox();
             comboBox1 = new ComboBox();
             label3 = new Label();
@@ -56,7 +64,7 @@
             groupBox1.Controls.Add(button1);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(592, 308);
+            groupBox1.Size = new Size(1091, 308);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Информация о структуре реестра";
@@ -109,6 +117,14 @@
             // groupBox2
             // 
             groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox2.Controls.Add(button11);
+            groupBox2.Controls.Add(button12);
+            groupBox2.Controls.Add(button10);
+            groupBox2.Controls.Add(button9);
+            groupBox2.Controls.Add(button8);
+            groupBox2.Controls.Add(button7);
+            groupBox2.Controls.Add(button6);
+            groupBox2.Controls.Add(button5);
             groupBox2.Controls.Add(listBox1);
             groupBox2.Controls.Add(comboBox1);
             groupBox2.Controls.Add(label3);
@@ -117,10 +133,90 @@
             groupBox2.Controls.Add(button2);
             groupBox2.Location = new Point(12, 350);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(592, 452);
+            groupBox2.Size = new Size(1091, 452);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Вывод названий и значений ветки реестра";
+            // 
+            // button11
+            // 
+            button11.Location = new Point(904, 230);
+            button11.Name = "button11";
+            button11.Size = new Size(109, 23);
+            button11.TabIndex = 13;
+            button11.Text = "восстановить";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
+            // button12
+            // 
+            button12.Location = new Point(904, 188);
+            button12.Name = "button12";
+            button12.Size = new Size(109, 23);
+            button12.TabIndex = 12;
+            button12.Text = "восстановить";
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
+            // 
+            // button10
+            // 
+            button10.Location = new Point(904, 147);
+            button10.Name = "button10";
+            button10.Size = new Size(109, 23);
+            button10.TabIndex = 11;
+            button10.Text = "восстановить";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
+            // button9
+            // 
+            button9.Location = new Point(904, 105);
+            button9.Name = "button9";
+            button9.Size = new Size(109, 23);
+            button9.TabIndex = 10;
+            button9.Text = "восстановить";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(652, 232);
+            button8.Name = "button8";
+            button8.Size = new Size(223, 23);
+            button8.TabIndex = 9;
+            button8.Text = "Контекстная командная строка";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(652, 188);
+            button7.Name = "button7";
+            button7.Size = new Size(223, 23);
+            button7.TabIndex = 8;
+            button7.Text = "Отключить диспейчер задач";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(652, 147);
+            button6.Name = "button6";
+            button6.Size = new Size(223, 23);
+            button6.TabIndex = 7;
+            button6.Text = "Убрать стрелочку с ярлыка";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(652, 105);
+            button5.Name = "button5";
+            button5.Size = new Size(223, 23);
+            button5.TabIndex = 6;
+            button5.Text = "Убрать слово ярлык";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // listBox1
             // 
@@ -182,7 +278,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(616, 814);
+            ClientSize = new Size(1115, 814);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "Form1";
@@ -210,5 +306,13 @@
         private Button button4;
         private Button button3;
         private Button button2;
+        private Button button8;
+        private Button button7;
+        private Button button6;
+        private Button button5;
+        private Button button11;
+        private Button button12;
+        private Button button10;
+        private Button button9;
     }
 }
