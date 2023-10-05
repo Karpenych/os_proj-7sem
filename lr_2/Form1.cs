@@ -13,6 +13,7 @@ namespace lr_2
             openFileDialog1.Multiselect = true;
             openFileDialog1.Filter = "Текстовые файлы (*.txt;*.csv)|*.txt;*.csv";
             listBox1.Items.Clear();
+            listBox2.Items.Clear();
         }
 
         private void btFiles_Click(object sender, EventArgs e)

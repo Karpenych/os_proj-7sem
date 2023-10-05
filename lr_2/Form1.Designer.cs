@@ -41,26 +41,28 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 22);
+            label1.Location = new Point(10, 16);
             label1.Name = "label1";
-            label1.Size = new Size(191, 20);
+            label1.Size = new Size(150, 15);
             label1.TabIndex = 0;
             label1.Text = "Введите слово для поиска";
             // 
             // textBox1
             // 
             textBox1.Cursor = Cursors.IBeam;
-            textBox1.Location = new Point(12, 45);
+            textBox1.Location = new Point(10, 34);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(191, 27);
+            textBox1.Size = new Size(168, 23);
             textBox1.TabIndex = 1;
             // 
             // btFind
             // 
             btFind.Cursor = Cursors.Hand;
-            btFind.Location = new Point(12, 206);
+            btFind.Location = new Point(10, 154);
+            btFind.Margin = new Padding(3, 2, 3, 2);
             btFind.Name = "btFind";
-            btFind.Size = new Size(1223, 42);
+            btFind.Size = new Size(1070, 32);
             btFind.TabIndex = 2;
             btFind.Text = "Найти";
             btFind.UseVisualStyleBackColor = true;
@@ -73,9 +75,10 @@
             // btFiles
             // 
             btFiles.Cursor = Cursors.Hand;
-            btFiles.Location = new Point(12, 93);
+            btFiles.Location = new Point(10, 70);
+            btFiles.Margin = new Padding(3, 2, 3, 2);
             btFiles.Name = "btFiles";
-            btFiles.Size = new Size(191, 95);
+            btFiles.Size = new Size(167, 71);
             btFiles.TabIndex = 3;
             btFiles.Text = "Выбрать файлы";
             btFiles.UseVisualStyleBackColor = true;
@@ -84,9 +87,9 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(726, 22);
+            label2.Location = new Point(635, 16);
             label2.Name = "label2";
-            label2.Size = new Size(142, 20);
+            label2.Size = new Size(113, 15);
             label2.TabIndex = 4;
             label2.Text = "Выбранные файлы";
             // 
@@ -94,27 +97,29 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.HorizontalScrollbar = true;
-            listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(224, 45);
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(196, 34);
+            listBox1.Margin = new Padding(3, 2, 3, 2);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(1011, 144);
+            listBox1.Size = new Size(885, 109);
             listBox1.TabIndex = 5;
             // 
             // listBox2
             // 
             listBox2.FormattingEnabled = true;
             listBox2.HorizontalScrollbar = true;
-            listBox2.ItemHeight = 20;
-            listBox2.Location = new Point(12, 274);
+            listBox2.ItemHeight = 15;
+            listBox2.Location = new Point(10, 206);
+            listBox2.Margin = new Padding(3, 2, 3, 2);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(1223, 344);
+            listBox2.Size = new Size(1071, 259);
             listBox2.TabIndex = 6;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1256, 632);
+            ClientSize = new Size(1099, 474);
             Controls.Add(listBox2);
             Controls.Add(listBox1);
             Controls.Add(label2);
@@ -122,8 +127,9 @@
             Controls.Add(btFind);
             Controls.Add(textBox1);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Карпенко ЛР2";
             ResumeLayout(false);
             PerformLayout();
         }
